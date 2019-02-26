@@ -25,15 +25,22 @@ class Router {
 	 * Match the url
 	 * @param $url
 	 *
-	 * @return bool
 	 */
 	public function match($url){
-		foreach($this->routes as $route => $params){
-			if($route == $url){
-				$this->params = $params;
-				return true;
+
+		$regex = '/(?<controller>[a-z-]+)\/(?<action>[a-z-]+)/i';
+
+		if(preg_match($regex, $url, $matches)){
+			foreach ($matches as $key => $param){
+				if(is_string($key)) {
+					$this->params[ $key ] = $param;
+				}
 			}
+
+			return true;
+
 		}
+
 		return false;
 	}
 
@@ -44,5 +51,6 @@ class Router {
 	public function getParams(){
 		return $this->params;
 	}
+
 
 }

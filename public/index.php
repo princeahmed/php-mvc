@@ -16,3 +16,4 @@ if($router->match($url)){
 	    print_r($router->getParams());
 	echo '</pre>';
 }
+
