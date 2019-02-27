@@ -10,8 +10,13 @@ class Router {
 	 *
 	 * @param array $routes
 	 */
-	public function setRoutes( $route, $params ) {
-		$this->routes[$route] = $params;
+	public function setRoutes( $route, $params = [] ) {
+
+		$route = preg_replace( '/\//', '\\/', $route );
+		$route = preg_replace( '/\{([a-z-]+)\}/', '(?P<\1>[a-z-]+)', $route );
+		$route = '/^' . $route . '$/';
+
+		$this->routes[ $route ] = $params;
 	}
 
 	/**
@@ -23,22 +28,24 @@ class Router {
 
 	/**
 	 * Match the url
+	 *
 	 * @param $url
 	 *
 	 */
-	public function match($url){
+	public function match( $url ) {
 
-		$regex = '/(?<controller>[a-z-]+)\/(?<action>[a-z-]+)/i';
-
-		if(preg_match($regex, $url, $matches)){
-			foreach ($matches as $key => $param){
-				if(is_string($key)) {
-					$this->params[ $key ] = $param;
+		foreach ( $this->routes as $route => $params ) {
+			if ( preg_match( $route, $url, $matches ) ) {
+				foreach ( $matches as $key => $match ) {
+					if ( is_string( $key ) ) {
+						$params[ $key ] = $match;
+					}
 				}
+
+				$this->params = $params;
+
+				return true;
 			}
-
-			return true;
-
 		}
 
 		return false;
@@ -48,7 +55,7 @@ class Router {
 	 * Get currently matched url params
 	 */
 
-	public function getParams(){
+	public function getParams() {
 		return $this->params;
 	}
 

@@ -4,9 +4,8 @@ require '../Core/Router.php';
 
 $router = new Router();
 
-$router->setRoutes( '', [ 'controller' => 'Home', 'action' => 'index' ] );
-$router->setRoutes( 'posts', [ 'controller' => 'Posts', 'action' => 'index' ] );
-$router->setRoutes( 'users', [ 'controller' => 'Users', 'action' => 'index' ] );
+$router->setRoutes( '', ['controller'=>'Home', 'action'=>'Index']);
+$router->setRoutes( '{controller}/{action}');
 
 $url = $_SERVER['QUERY_STRING'];
 
