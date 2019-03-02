@@ -1,4 +1,5 @@
 <?php
+
 namespace Core;
 
 
@@ -67,13 +68,16 @@ class Router {
 	 */
 
 	public function dispatch( $url ) {
+
+		$url = $this->removeQueryStringVariables($url);
+
 		if ( $this->match( $url ) ) {
 			$controller = $this->params['controller'];
 			$controller = $this->convertToStudlyCaps( $controller );
 			$controller = "App\Controllers\\$controller";
 
 			if ( class_exists( $controller ) ) {
-				$controller = new $controller();
+				$controller = new $controller($this->params);
 
 				$action = $this->convertToCamelCase( $this->params['action'] );
 
@@ -86,7 +90,7 @@ class Router {
 				echo "Class <code>$controller</code> not found.";
 			}
 
-		}else{
+		} else {
 			echo 'No Match';
 		}
 	}
@@ -111,6 +115,25 @@ class Router {
 		$str = lcfirst( str_replace( ' ', '', $str ) );
 
 		return $str;
+	}
+
+	/**
+	 * Remove Query String Variables
+	 * products/new?id=1 -> products/new
+	 */
+
+	public function removeQueryStringVariables( $url ) {
+		if ( ! empty( $url ) ) {
+
+			$parts = explode( '&', $url, 2 );
+			if ( strpos( $parts[0], '=' ) === false ) {
+				$url = $parts[0];
+			} else {
+				$url = '';
+			}
+		}
+
+		return $url;
 	}
 
 

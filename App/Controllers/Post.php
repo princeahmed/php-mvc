@@ -4,7 +4,7 @@ namespace App\Controllers;
  * Class Post
  */
 
-class Post {
+class Post extends \Core\Controller {
 
 	/**
 	 * Index Function
@@ -12,6 +12,9 @@ class Post {
 
 	public function index(){
 		echo '<h2>Post Index</h2>';
+		echo '<pre>';
+		    print_r($this->params);
+		echo '</pre>';
 	}
 
 }
