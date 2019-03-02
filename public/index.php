@@ -1,18 +1,22 @@
 <?php
 
-require '../Core/Router.php';
+spl_autoload_register( function ( $class_name ) {
+	$root = dirname( __DIR__ );
+	$file = $root . '/' . str_replace( '\\', '/', $class_name ) . '.php';
+	if ( is_readable( $file ) ) {
+		require_once $file;
+	}
+}
+);
 
-$router = new Router();
+$router = new Core\Router();
 
-$router->setRoutes( '', ['controller'=>'Home', 'action'=>'Index']);
-$router->setRoutes( '{controller}/{action}');
+$router->setRoutes( '', [ 'controller' => 'Home', 'action' => 'Index' ] );
+$router->setRoutes( '{action}', [ 'controller' => 'Home' ] );
+$router->setRoutes( '{controller}/{action}' );
+$router->setRoutes( '{controller}/{id:\d+}/{action}' );
 
 $url = $_SERVER['QUERY_STRING'];
 
-
-if($router->match($url)){
-	echo '<pre>';
-	    print_r($router->getParams());
-	echo '</pre>';
-}
+$router->dispatch( $url );
 

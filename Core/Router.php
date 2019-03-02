@@ -1,4 +1,6 @@
 <?php
+namespace Core;
+
 
 class Router {
 
@@ -14,6 +16,7 @@ class Router {
 
 		$route = preg_replace( '/\//', '\\/', $route );
 		$route = preg_replace( '/\{([a-z-]+)\}/', '(?P<\1>[a-z-]+)', $route );
+		$route = preg_replace( '/\{([a-z]+):([^\}]+)\}/', '(?P<\1>\2)', $route );
 		$route = '/^' . $route . '$/';
 
 		$this->routes[ $route ] = $params;
@@ -57,6 +60,57 @@ class Router {
 
 	public function getParams() {
 		return $this->params;
+	}
+
+	/**
+	 * Dispatch the url
+	 */
+
+	public function dispatch( $url ) {
+		if ( $this->match( $url ) ) {
+			$controller = $this->params['controller'];
+			$controller = $this->convertToStudlyCaps( $controller );
+			$controller = "App\Controllers\\$controller";
+
+			if ( class_exists( $controller ) ) {
+				$controller = new $controller();
+
+				$action = $this->convertToCamelCase( $this->params['action'] );
+
+				if ( is_callable( array( $controller, $action ) ) ) {
+					$controller->$action();
+				} else {
+					echo "Method <code>$action</code> not found in " . get_class( $controller );
+				}
+			} else {
+				echo "Class <code>$controller</code> not found.";
+			}
+
+		}else{
+			echo 'No Match';
+		}
+	}
+
+	/**
+	 * Convert String to StudlyCaps
+	 */
+
+	public function convertToStudlyCaps( $str ) {
+		$str = ucwords( str_replace( '-', ' ', $str ) );
+		$str = str_replace( ' ', '', $str );
+
+		return $str;
+	}
+
+	/**
+	 * Convert a string to camelCase
+	 */
+
+	public function convertToCamelCase( $str ) {
+		$str = ucwords( str_replace( '-', ' ', $str ) );
+		$str = lcfirst( str_replace( ' ', '', $str ) );
+
+		return $str;
 	}
 
 
