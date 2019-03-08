@@ -9,7 +9,19 @@
 </head>
 <body>
 
-<h1>Hello <?php print_r( $name ) ?>!</h1>
+@if(!empty($name))
+    <h1>Hello {{$name}}</h1>
+@endif
+
+@if(!empty($posts))
+    @forelse($posts as $post)
+        <h1>{{$post->title}}</h1>
+        <p>{{$post->content}}</p>
+        <hr>
+    @empty
+        <h1>No Post.</h1>
+    @endforelse
+@endif
 
 </body>
 </html>

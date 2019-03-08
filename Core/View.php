@@ -39,15 +39,17 @@ class View {
 	 * @param array $params
 	 */
 
-	public function view( $view, $params = [] ) {
+	public static function view( $view, $params = [] ) {
 
 		$blade = new \Jenssegers\Blade\Blade( dirname( __DIR__ ) . '/App/Views', dirname( __DIR__ ) . '/App/Views/cache' );
 
 		try {
-			$blade->make( $view, $params );
+			echo $blade->make( $view, $params );
 		} catch ( \Exception $exception ) {
-			echo $exception;
+			echo $exception->getMessage();
 		};
+
+		exit();
 
 	}
 

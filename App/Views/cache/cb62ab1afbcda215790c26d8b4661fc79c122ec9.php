@@ -10,7 +10,19 @@
 </head>
 <body>
 
-<h1>Hello <?php print_r( $name ) ?>!</h1>
+<?php if(!empty($name)): ?>
+    <h1>Hello <?php echo e($name); ?></h1>
+<?php endif; ?>
+
+<?php if(!empty($posts)): ?>
+    <?php $__empty_1 = true; $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+        <h1><?php echo e($post->title); ?></h1>
+        <p><?php echo e($post->content); ?></p>
+        <hr>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+        <h1>No Post.</h1>
+    <?php endif; ?>
+<?php endif; ?>
 
 </body>
 </html>

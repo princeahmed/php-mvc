@@ -17,7 +17,7 @@ class Home extends \Core\Controller {
 
 	public function indexAction() {
 
-		View::view( 'indexa', [ 'name' => 'Prince' ] );
+		View::view( 'index', [ 'name' => 'Prince' ] );
 
 	}
 
@@ -26,12 +26,10 @@ class Home extends \Core\Controller {
 	}
 
 	public function before() {
-		return;
 		echo 'Run Before';
 	}
 
 	public function after() {
-		return;
 		echo 'Run After';
 	}
 
