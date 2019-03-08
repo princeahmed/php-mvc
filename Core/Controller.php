@@ -2,7 +2,9 @@
 
 namespace Core;
 
-abstract class Controller{
+use Core\View;
+
+abstract class Controller {
 
 	/**
 	 * Route Parameters
@@ -10,7 +12,7 @@ abstract class Controller{
 	 */
 	protected $params = [];
 
-	public function __construct($params) {
+	public function __construct( $params ) {
 		$this->params = $params;
 	}
 
@@ -20,22 +22,22 @@ abstract class Controller{
 	 */
 
 	public function __call( $name, $arguments ) {
-		$method = $name.'Action';
+		$method = $name . 'Action';
 
-		if(method_exists($this, $method)){
-			if(!$this->before()){
-				call_user_func_array(array($this, $method), $arguments);
-				$this->after();
-			}
-		}else{
-			echo "$name is not exists in ".get_class($this);
+		if ( method_exists( $this, $method ) ) {
+			call_user_func_array( array( $this, $method ), $arguments );
+		} else {
+			echo "$name is not exists in " . get_class( $this );
 		}
 	}
 
 	/**
 	 * Run before every function
 	 */
-	protected function before(){}
-	protected function after(){}
+	protected function before() {
+	}
+
+	protected function after() {
+	}
 
 }

@@ -1,9 +1,13 @@
 <?php
+
 namespace App\Controllers;
+
+use Core\View;
+
+
 /**
  * Class Home
  */
-
 class Home extends \Core\Controller {
 
 	/**
@@ -11,19 +15,23 @@ class Home extends \Core\Controller {
 	 */
 
 
-	public function indexAction(){
-		echo '<h1>Home Index</h1>';
+	public function indexAction() {
+
+		View::view( 'indexa', [ 'name' => 'Prince' ] );
+
 	}
 
-	public function dashAction(){
+	public function dashAction() {
 		echo '<h2>Dashboard</h2>';
 	}
 
 	public function before() {
+		return;
 		echo 'Run Before';
 	}
 
 	public function after() {
+		return;
 		echo 'Run After';
 	}
 

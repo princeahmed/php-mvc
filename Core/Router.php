@@ -74,7 +74,7 @@ class Router {
 		if ( $this->match( $url ) ) {
 			$controller = $this->params['controller'];
 			$controller = $this->convertToStudlyCaps( $controller );
-			$controller = "App\Controllers\\$controller";
+			$controller = $this->getNameSpace().$controller;
 
 			if ( class_exists( $controller ) ) {
 				$controller = new $controller($this->params);
@@ -134,6 +134,20 @@ class Router {
 		}
 
 		return $url;
+	}
+
+	/**
+	 * Get the namespace
+	 * @return string
+	 */
+	protected function getNameSpace(){
+		$namespace = 'App\Controllers\\';
+
+		if(array_key_exists('namespace', $this->params)){
+			$namespace = $namespace.$this->params['namespace'].'\\';
+		}
+
+		return $namespace;
 	}
 
 
