@@ -17,7 +17,7 @@ class Posts extends \Core\Controller {
 
 		$posts = Post::getAll();
 
-		return View::view('index', array('posts' => $posts));
+		return View::view('posts/index', array('posts' => $posts));
 
 	}
 
