@@ -8,6 +8,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./assets/production/js/frontend.min.js"></script>
 
     <title>@yield('title', 'Write PHP likes a Pro') </title>
 </head>
