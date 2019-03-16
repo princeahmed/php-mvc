@@ -43,11 +43,14 @@ module.exports = {
                         // options: {
                         //     name: '[name].[ext]'
                         // }
-                        loader: 'url-loader',
+                        loader: mode === 'production' ? 'url-loader' : 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            limit: 8192
+                            //limit: 8192
                         }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
                     }
                 ]
             },
