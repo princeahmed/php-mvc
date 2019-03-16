@@ -8,7 +8,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="./assets/production/js/frontend.min.js"></script>
+    <link rel="stylesheet" href="/assets/production/<?php echo $assets['frontend']['css'] ?>">
 
     <title>@yield('title', 'Write PHP likes a Pro') </title>
 </head>
@@ -23,6 +23,9 @@
 
                     <!-- Links -->
                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link 1</a>
                         </li>
@@ -42,9 +45,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 bg-green">
             @section('main')
-                <h2 class="text-center text-primary">This is main body</h2>
+                <h2 id="body-title" class="text-center text-primary">This is main body</h2>
             @show
         </div>
         <div class="col-md-4">
@@ -88,6 +91,9 @@
         </div>
     </div>
 </div>
+
+<!--Body Script-->
+<script src="./assets/production/<?php echo $assets['frontend']['js'] ?>"></script>
 
 </body>
 </html>

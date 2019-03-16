@@ -17,7 +17,7 @@ class Home extends \Core\Controller {
 
 	public function indexAction() {
 
-		View::view( 'home/index', [ 'name' => 'Prince' ] );
+		View::view( 'home/index', [ 'name' => 'Prince', 'assets' =>$this->getAssets() ] );
 
 	}
 

@@ -1,3 +1,5 @@
-body{
-  background: url("../js/routine.png");
+$primary: greenyellow;
+
+.bg-green{
+  background: $primary;
 }

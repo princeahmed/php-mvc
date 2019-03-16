@@ -40,4 +40,30 @@ abstract class Controller {
 	protected function after() {
 	}
 
+	protected function getAssets() {
+		$assets = array();
+		$json   = json_decode( file_get_contents( './assets/manifest.json' ) );
+
+		foreach ( $json as $key => $asset ) {
+
+			$asset = array_map( function ( $name ) use ( $key ) {
+				$parts         = explode( '.', $name );
+				$type          = end( $parts );
+				$file[ $type ] = $name;
+
+				return $file;
+
+			}, $asset );
+
+			foreach ( $asset as $file ) {
+				foreach ( $file as $type => $name ) {
+					$assets[ $key ][ $type ] = $name;
+				}
+			}
+
+		}
+
+		return $assets;
+	}
+
 }
