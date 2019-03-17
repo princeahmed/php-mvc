@@ -1,0 +1,38 @@
+a {
+  text-decoration: none; }
+
+.bg-green {
+  background: url(routine.png);
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 10px; }
+
+.title {
+  background: orange;
+  padding: 10px 15px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center; }
+
+.navbar {
+  background: cadetblue; }
+  .navbar-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; }
+  .navbar .nav-link {
+    font-size: 15px;
+    color: white; }
+
+.list-group {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center; }
+
+* html body {
+  background: gray; }

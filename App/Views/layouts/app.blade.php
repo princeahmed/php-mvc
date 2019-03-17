@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/assets/production/<?php echo $assets['frontend']['css'] ?>">
+    <link rel="stylesheet" href="assets/<?php echo $assets['frontend']['css'] ?>">
 
     <title>@yield('title', 'Write PHP likes a Pro') </title>
 </head>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-4">
             @section('sidebar')
-                <h3 class="text-center text-danger">Sidebar Content</h3>
+                <h3 class="title text-center text-danger">Sidebar Content</h3>
             @show
         </div>
     </div>
@@ -92,7 +92,7 @@
 </div>
 
 <!--Body Script-->
-<script src="./assets/production/<?php echo $assets['frontend']['js'] ?>"></script>
+<script src="assets/<?php echo $assets['frontend']['js'] ?>"></script>
 
 </body>
 </html>

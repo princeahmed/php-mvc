@@ -1,0 +1,51 @@
+//@import '~bootstrap/scss/bootstrap';
+@import "mixins";
+@import "variables";
+
+$primary: greenyellow;
+
+a{
+  text-decoration: none;
+}
+
+.bg-green{
+  background: url("../images/routine.png");
+  @include large-text;
+  @include rounded;
+}
+
+.title{
+  @include warning;
+  @include rounded;
+  text-align: center;
+}
+
+.navbar{
+  &-nav{
+    @include flex;
+    padding: 10px 15px;
+  }
+  .nav-link{
+    font: {
+      size: $menu-item-font-size;
+    }
+    color: $menu-item-color;
+  }
+  background: cadetblue;
+}
+
+@include content{
+  .list-group{
+    @include flex;
+  }
+}
+
+@include apply-to-ie6{
+  * html{
+    body{
+      background: gray;
+    }
+  }
+}
+
+

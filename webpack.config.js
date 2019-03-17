@@ -4,6 +4,7 @@ var glob = require('glob');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var PurgecssPlugin = require('purgecss-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+
 //project Mode Development|Production
 var mode = 'development';
 
@@ -11,12 +12,12 @@ module.exports = {
     mode: mode,
     entry: {
         frontend: [
-            __dirname + '/public/assets/development/js/frontend.js',
-            __dirname + '/public/assets/development/css/frontend.scss'
+            __dirname + '/src/js/frontend.js',
+            __dirname + '/src/css/frontend.scss'
         ],
         admin: [
-            __dirname + '/public/assets/development/js/admin.js',
-            __dirname + '/public/assets/development/css/admin.scss'
+            __dirname + '/src/js/admin.js',
+            __dirname + '/src/css/admin.scss'
         ]
     },
     output: {
@@ -71,6 +72,7 @@ module.exports = {
     },
 
     plugins: [
+
         new ExtractTextPlugin(mode === 'production' ? '[name].min.css' : '[name].[chunkhash].css'),
 
         new webpack.LoaderOptionsPlugin({
@@ -86,7 +88,7 @@ module.exports = {
             verbose: true,
             dry: false,
             cleanStaleWebpackAssets: true,
-            cleanOnceBeforeBuildPatterns: ['**/*', '!development/**']
+            watch: false
         }),
 
         function () {

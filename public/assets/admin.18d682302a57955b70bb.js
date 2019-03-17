@@ -86,36 +86,36 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./public/assets/development/css/admin.scss":
-/*!**************************************************!*\
-  !*** ./public/assets/development/css/admin.scss ***!
-  \**************************************************/
+/***/ "./src/css/admin.scss":
+/*!****************************!*\
+  !*** ./src/css/admin.scss ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./public/assets/development/css/admin.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/css/admin.scss?");
 
 /***/ }),
 
-/***/ "./public/assets/development/js/admin.js":
-/*!***********************************************!*\
-  !*** ./public/assets/development/js/admin.js ***!
-  \***********************************************/
+/***/ "./src/js/admin.js":
+/*!*************************!*\
+  !*** ./src/js/admin.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./public/assets/development/js/admin.js?");
+eval("\n\n//# sourceURL=webpack:///./src/js/admin.js?");
 
 /***/ }),
 
 /***/ 1:
-/*!************************************************************************************************!*\
-  !*** multi ./public/assets/development/js/admin.js ./public/assets/development/css/admin.scss ***!
-  \************************************************************************************************/
+/*!****************************************************!*\
+  !*** multi ./src/js/admin.js ./src/css/admin.scss ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\xampp\\htdocs\\mvc/public/assets/development/js/admin.js */\"./public/assets/development/js/admin.js\");\nmodule.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\mvc/public/assets/development/css/admin.scss */\"./public/assets/development/css/admin.scss\");\n\n\n//# sourceURL=webpack:///multi_./public/assets/development/js/admin.js_./public/assets/development/css/admin.scss?");
+eval("__webpack_require__(/*! C:\\xampp\\htdocs\\mvc/src/js/admin.js */\"./src/js/admin.js\");\nmodule.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\mvc/src/css/admin.scss */\"./src/css/admin.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/js/admin.js_./src/css/admin.scss?");
 
 /***/ })
 

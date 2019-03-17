@@ -1,0 +1,35 @@
+@mixin warning{
+  background: orange;
+  padding: 10px 15px;
+  font: {
+    size:30px;
+    weight: bold
+  }
+}
+
+@mixin large-text{
+  text-align: center;
+  font: {
+    size: 42px;
+    weight: bold;
+  }
+}
+
+@mixin rounded{
+  border-radius: 10px;
+}
+
+@mixin flex($flow: row, $justify: space-between, $align: center){
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin content{
+  @content;
+}
+
+@mixin apply-to-ie6{
+  @content;
+}

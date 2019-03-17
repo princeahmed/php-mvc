@@ -97,49 +97,49 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
-/***/ "./public/assets/development/css/frontend.scss":
-/*!*****************************************************!*\
-  !*** ./public/assets/development/css/frontend.scss ***!
-  \*****************************************************/
+/***/ "./src/css/frontend.scss":
+/*!*******************************!*\
+  !*** ./src/css/frontend.scss ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./public/assets/development/css/frontend.scss?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/css/frontend.scss?");
 
 /***/ }),
 
-/***/ "./public/assets/development/js/components/form.js":
-/*!*********************************************************!*\
-  !*** ./public/assets/development/js/components/form.js ***!
-  \*********************************************************/
+/***/ "./src/js/components/form.js":
+/*!***********************************!*\
+  !*** ./src/js/components/form.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction msg($msg) {\n  console.log($msg);\n}\n\nfunction webAlert($msg) {\n  alert($msg);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  msg: msg,\n  myAlert: webAlert\n});\n\n//# sourceURL=webpack:///./public/assets/development/js/components/form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction msg($msg) {\n  console.log($msg);\n}\n\nfunction webAlert($msg) {\n  alert($msg);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  msg: msg,\n  myAlert: webAlert\n});\n\n//# sourceURL=webpack:///./src/js/components/form.js?");
 
 /***/ }),
 
-/***/ "./public/assets/development/js/frontend.js":
-/*!**************************************************!*\
-  !*** ./public/assets/development/js/frontend.js ***!
-  \**************************************************/
+/***/ "./src/js/frontend.js":
+/*!****************************!*\
+  !*** ./src/js/frontend.js ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./public/assets/development/js/components/form.js\");\n\n\nvar $title = document.getElementById('body-title');\n$title.innerHTML = '<em class=\"text-danger\">Hello World</em>';\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {\n  _components_form__WEBPACK_IMPORTED_MODULE_1__[\"default\"].msg('JavaScript is Awesome!');\n});\n\n//# sourceURL=webpack:///./public/assets/development/js/frontend.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./src/js/components/form.js\");\n\n\n\n//# sourceURL=webpack:///./src/js/frontend.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************!*\
-  !*** multi ./public/assets/development/js/frontend.js ./public/assets/development/css/frontend.scss ***!
-  \******************************************************************************************************/
+/*!**********************************************************!*\
+  !*** multi ./src/js/frontend.js ./src/css/frontend.scss ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\xampp\\htdocs\\mvc/public/assets/development/js/frontend.js */\"./public/assets/development/js/frontend.js\");\nmodule.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\mvc/public/assets/development/css/frontend.scss */\"./public/assets/development/css/frontend.scss\");\n\n\n//# sourceURL=webpack:///multi_./public/assets/development/js/frontend.js_./public/assets/development/css/frontend.scss?");
+eval("__webpack_require__(/*! C:\\xampp\\htdocs\\mvc/src/js/frontend.js */\"./src/js/frontend.js\");\nmodule.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\mvc/src/css/frontend.scss */\"./src/css/frontend.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/js/frontend.js_./src/css/frontend.scss?");
 
 /***/ })
 
