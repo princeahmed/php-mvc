@@ -16,6 +16,7 @@ abstract class Controller {
 		$this->params = $params;
 	}
 
+
 	/**
 	 * @param $name
 	 * @param $arguments
@@ -27,7 +28,8 @@ abstract class Controller {
 		if ( method_exists( $this, $method ) ) {
 			call_user_func_array( array( $this, $method ), $arguments );
 		} else {
-			echo "$name is not exists in " . get_class( $this );
+			$str = "is not exists in";
+			echo "$name {$str} " . get_class( $this );
 		}
 	}
 
