@@ -3,6 +3,11 @@
 @import "variables";
 
 $primary: greenyellow;
+$prefix: '.prefix';
+
+*{
+  box-sizing: border-box;
+}
 
 a{
   text-decoration: none;
@@ -21,9 +26,12 @@ a{
 }
 
 .navbar{
+
   &-nav{
-    @include flex;
-    padding: 10px 15px;
+    @include flex {
+      justify-content: space-between;
+    };
+    padding: 15px 15px;
   }
   .nav-link{
     font: {
@@ -31,7 +39,7 @@ a{
     }
     color: $menu-item-color;
   }
-  background: cadetblue;
+
 }
 
 @include content{
@@ -46,6 +54,39 @@ a{
       background: gray;
     }
   }
+}
+
+.section{
+  .container{
+    width: 1200px;
+    margin: 0 auto;
+    .row{
+      @include flex;
+      margin: 0 -15px 0;
+    }
+  }
+}
+
+
+/**
+* Flex Column Width
+*/
+
+$colors: red, green, yellow,white, purple, greenyellow,darkred, cyan, skyblue,orange, blue, gray;
+
+@for $i from 1 through 13{
+  $width: percentage(1/(12/$i));
+  $color: nth($colors, random(12));
+
+
+  .col-#{$i}{
+    width: $width;
+    padding: 15px;
+    background:$color;
+    .box{
+    }
+  }
+
 }
 
 

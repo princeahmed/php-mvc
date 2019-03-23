@@ -33,3 +33,20 @@
 @mixin apply-to-ie6{
   @content;
 }
+
+@mixin google-font($name){
+  $name: unquote($name);
+  @import url("https://fonts.googleapies.com/css?family=#{$name}");
+}
+
+@mixin tiny-screens{
+  @media screen and (max-width: 320px){
+    @content;
+  }
+}
+
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+  @content
+}

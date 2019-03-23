@@ -15,82 +15,66 @@
 <body>
 
 <!--Header-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <?php $__env->startSection('header'); ?>
-                <nav class="navbar navbar-expand-sm bg-light">
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="box">
+                    <?php $__env->startSection('header'); ?>
+                        <nav class="navbar">
 
-                    <!-- Links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 3</a>
-                        </li>
-                    </ul>
+                            <!-- Links -->
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link 3</a>
+                                </li>
+                            </ul>
 
-                </nav>
-            <?php echo $__env->yieldSection(); ?>
+                        </nav>
+                </div>
+                <?php echo $__env->yieldSection(); ?>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 bg-green">
-            <?php $__env->startSection('main'); ?>
-                <h2 id="body-title" class="text-center text-primary">This is main body</h2>
-            <?php echo $__env->yieldSection(); ?>
-        </div>
-        <div class="col-md-4">
-            <?php $__env->startSection('sidebar'); ?>
-                <h3 class="title text-center text-danger">Sidebar Content</h3>
-            <?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('body'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 bg-green">
+                <?php $__env->startSection('main'); ?>
+                    <h2 id="body-title" class="text-center text-primary">This is main body</h2>
+                <?php echo $__env->yieldSection(); ?>
+            </div>
+            <div class="col-md-4">
+                <?php $__env->startSection('sidebar'); ?>
+                    <h3 class="title text-center text-danger">Sidebar Content</h3>
+                <?php echo $__env->yieldSection(); ?>
+            </div>
         </div>
     </div>
-</div>
+<?php echo $__env->yieldSection(); ?>
 
 
 <!--Footer-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <?php $__env->startSection('footer'); ?>
-                <div class="row">
-                    <div class="col-md-4">
-                        <ul class="list-group">
-                            <li class="list-group-item">First item</li>
-                            <li class="list-group-item">Second item</li>
-                            <li class="list-group-item">Third item</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-group">
-                            <li class="list-group-item">First item</li>
-                            <li class="list-group-item">Second item</li>
-                            <li class="list-group-item">Third item</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-group list-group-primary">
-                            <li class="list-group-item">First item</li>
-                            <li class="list-group-item">Second item</li>
-                            <li class="list-group-item">Third item</li>
-                        </ul>
-                    </div>
-                </div>
-            <?php echo $__env->yieldSection(); ?>
-        </div>
-    </div>
-</div>
+
+
+<?php $__env->startSection('footer'); ?>
+    <h3>App Footer</h3>
+<?php echo $__env->yieldSection(); ?>
+
+
+<!--Footer-->
+
 
 <!--Body Script-->
 <script src="assets/<?php echo $assets['frontend']['js'] ?>"></script>
