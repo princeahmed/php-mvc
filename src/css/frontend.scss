@@ -89,4 +89,38 @@ $colors: red, green, yellow,white, purple, greenyellow,darkred, cyan, skyblue,or
 
 }
 
+/**
+=========
+Card Design
+=========
+*/
+
+.card{
+  @include flex;
+  box-shadow: 2px 2px 5px #000, -2px -2px 10px #000;
+
+  &>*{
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+
+  &-left{
+    @include flex;
+    background: blue;
+    flex: 1;
+    img{
+      max-width: 150px;
+    }
+
+    .category{
+      margin-top: auto;
+    }
+  }
+  &-right{
+    @include flex;
+    flex: 1;
+  }
+}
+
 
