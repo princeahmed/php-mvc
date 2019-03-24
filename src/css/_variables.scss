@@ -1,18 +1,3 @@
-//=== colors ===
-$text-color: #000;
-$theme-color: greenyellow;
-$secondary-color: darkgreen;
-$link-color: blue;
-$menu-item-color: white;
-
-//=== fonts ===
-$text-font: Verdana, Arial;
-$heading-font: 'Palatino Linotype';
-
-//=== font-sizes ===
-$body-font-size: 14px;
-$heading-font-size: 38px;
-$menu-item-font-size: 15px;
-
-//=== section dimensions ===
-$header: 60px;
+$green: #55c57a;
+$ligt-green: lighten($green, 10%);
+$dark-green: darken($green, 10%);

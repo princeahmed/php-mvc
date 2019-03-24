@@ -15,12 +15,12 @@
 <body>
 
 <!--Header-->
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="box">
-                    <?php $__env->startSection('header'); ?>
+<?php $__env->startSection('header'); ?>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
                         <nav class="navbar">
 
                             <!-- Links -->
@@ -40,12 +40,12 @@
                             </ul>
 
                         </nav>
+                    </div>
                 </div>
-                <?php echo $__env->yieldSection(); ?>
             </div>
         </div>
     </div>
-</div>
+<?php echo $__env->yieldSection(); ?>
 
 <?php $__env->startSection('body'); ?>
     <div class="container">

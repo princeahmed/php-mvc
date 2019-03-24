@@ -14,12 +14,12 @@
 <body>
 
 <!--Header-->
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="box">
-                    @section('header')
+@section('header')
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box">
                         <nav class="navbar">
 
                             <!-- Links -->
@@ -39,12 +39,12 @@
                             </ul>
 
                         </nav>
+                    </div>
                 </div>
-                @show
             </div>
         </div>
     </div>
-</div>
+@show
 
 @section('body')
     <div class="container">

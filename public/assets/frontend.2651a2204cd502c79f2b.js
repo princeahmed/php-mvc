@@ -104,7 +104,18 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/css/frontend.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/css-loader/dist/cjs.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\\n\\r\\n      @include \\r\\n     ^\\r\\n      Invalid CSS after \\\"      @include\\\": expected identifier, was \\\"}\\\"\\r\\n      in C:\\\\xampp\\\\htdocs\\\\mvc\\\\src\\\\css\\\\components\\\\_header.scss (line 37, column 7)\\n    at runLoaders (C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:301:20)\\n    at C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:367:11\\n    at C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:233:18\\n    at context.callback (C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:111:13)\\n    at Object.render [as callback] (C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\sass-loader\\\\lib\\\\loader.js:52:13)\\n    at Object.done [as callback] (C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\neo-async\\\\async.js:8077:18)\\n    at options.error (C:\\\\xampp\\\\htdocs\\\\mvc\\\\node_modules\\\\node-sass\\\\lib\\\\index.js:294:32)\");\n\n//# sourceURL=webpack:///./src/css/frontend.scss?");
+
+/***/ }),
+
+/***/ "./src/images/logo.png":
+/*!*****************************!*\
+  !*** ./src/images/logo.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"logo.png\";\n\n//# sourceURL=webpack:///./src/images/logo.png?");
 
 /***/ }),
 
@@ -128,7 +139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction msg($msg) {\n  conso
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./src/js/components/form.js\");\n\n\n\n//# sourceURL=webpack:///./src/js/frontend.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./src/js/components/form.js\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_logo_png__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/frontend.js?");
 
 /***/ }),
 

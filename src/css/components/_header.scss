@@ -1,0 +1,68 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($ligt-green, .8), rgba($dark-green, .8)), url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /*Left to Top*/
+
+  .logo-box{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    .logo{
+      max-width: 60px;
+    }
+  }
+
+  .hero-title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .main-title{
+      @extend .title;
+      font-size: 60px;
+      @include anim-left-right(left, -100px);
+      animation-name: anim-left;
+      animation-duration: .5s;
+    }
+
+    .sub-title{
+      @extend .title;
+      font-size: 22px;
+
+      @include anim-left-right(right, 100px);
+      animation-name: anim-right;
+      animation-duration: .5s;
+      animation-delay: .5s;
+
+    }
+
+  }
+
+  .hero-action{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    .action-btn{
+      @extend .title;
+      letter-spacing: 5px;
+      text-decoration: none;
+      padding: 10px 15px;
+      border: 2px solid #fff;
+      transition: all .2s ease-in-out;
+      backface-visibility: hidden;
+      border-radius: 8px;
+
+      &:hover{
+        border-radius: 0;
+        transform: skew(-10deg);
+        background: linear-gradient($ligt-green, $dark-green);
+      }
+    }
+  }
+
+}

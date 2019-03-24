@@ -1,52 +1,13 @@
-@mixin warning{
-  background: orange;
-  padding: 10px 15px;
-  font: {
-    size:30px;
-    weight: bold
+@mixin anim-left-right($direction, $offest){
+  @keyframes anim-#{$direction} {
+    0%{
+      opacity: 0;
+      transform: translateX($offest);
+    }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
   }
-}
-
-@mixin large-text{
-  text-align: center;
-  font: {
-    size: 42px;
-    weight: bold;
   }
-}
-
-@mixin rounded{
-  border-radius: 10px;
-}
-
-@mixin flex($flow: row, $justify: space-between, $align: center){
-  display: flex;
-  flex-flow: $flow;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin content{
-  @content;
-}
-
-@mixin apply-to-ie6{
-  @content;
-}
-
-@mixin google-font($name){
-  $name: unquote($name);
-  @import url("https://fonts.googleapies.com/css?family=#{$name}");
-}
-
-@mixin tiny-screens{
-  @media screen and (max-width: 320px){
-    @content;
-  }
-}
-
-@mixin flex{
-  display: flex;
-  flex-wrap: wrap;
-  @content
 }
