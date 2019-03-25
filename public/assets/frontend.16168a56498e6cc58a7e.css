@@ -8,7 +8,7 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.7; }
 
-.title, .header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn {
+.title, .header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn, .header .hero-action .action-btn-2 {
   color: #fff;
   display: block;
   letter-spacing: 15px; }
@@ -93,7 +93,8 @@ body {
     bottom: 30%;
     left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+            transform: translateX(-50%);
+    display: flex; }
     .header .hero-action .action-btn {
       letter-spacing: 5px;
       text-decoration: none;
@@ -108,3 +109,39 @@ body {
         -webkit-transform: skew(-10deg);
                 transform: skew(-10deg);
         background: linear-gradient(#7bd298, #3bac60); }
+      .header .hero-action .action-btn-2 {
+        text-decoration: none;
+        background: #fff;
+        color: #000;
+        padding: 10px 15px;
+        margin-left: 20px;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative; }
+        .header .hero-action .action-btn-2:hover {
+          box-shadow: 1px 0 10px #000;
+          -webkit-transform: translateY(-3px);
+                  transform: translateY(-3px); }
+          .header .hero-action .action-btn-2:hover:after {
+            opacity: 0;
+            -webkit-animation: moveBtn .3s ease;
+                    animation: moveBtn .3s ease;
+            -webkit-animation-fill-mode: backwards;
+                    animation-fill-mode: backwards;
+            -webkit-transform: scaleY(1.5) scaleX(1.2);
+                    transform: scaleY(1.5) scaleX(1.2); }
+        .header .hero-action .action-btn-2:active {
+          box-shadow: 1px 0 15px #000;
+          -webkit-transform: translateY(-1px);
+                  transform: translateY(-1px); }
+        .header .hero-action .action-btn-2:after {
+          content: '';
+          background: #fff;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          border-radius: 100px;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: all .4s; }

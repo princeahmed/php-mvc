@@ -18,6 +18,7 @@
 
                     <div class="hero-action">
                         <a href="#" class="action-btn">GET STARTED</a>
+                        <a href="#" class="action-btn-2">CONTACT</a>
                     </div>
 
                 </div>
