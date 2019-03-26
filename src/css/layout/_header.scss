@@ -22,7 +22,7 @@
     text-align: center;
 
     .main-title{
-      @extend .title;
+      @extend %title;
       font-size: 60px;
       @include anim-left-right(left, -100px);
       animation-name: anim-left;
@@ -30,7 +30,7 @@
     }
 
     .sub-title{
-      @extend .title;
+      @extend %title;
       font-size: 22px;
 
       @include anim-left-right(right, 100px);
@@ -49,11 +49,11 @@
     transform: translateX(-50%);
     display: flex;
     .action-btn{
-      @extend .title;
+      @extend %title;
       letter-spacing: 5px;
       text-decoration: none;
       padding: 10px 15px;
-      border: 2px solid #fff;
+      border: 3px solid #fff;
       transition: all .2s ease-in-out;
       backface-visibility: hidden;
       border-radius: 8px;
@@ -65,7 +65,7 @@
       }
 
       &-2{
-        @extend .title;
+        @extend %title;
         text-decoration: none;
         background: #fff;
         color: #000;

@@ -1,6 +1,16 @@
-@import "reset";
-@import "mixins";
-@import "variables";
-@import "fonts";
-@import "utility";
-@import "components/header";
+//abstracts
+@import
+"abstracts/mixins",
+"abstracts/variables",
+"abstracts/placeholder";
+//vendors
+//base
+@import
+"base/reset",
+"base/fonts";
+//layout
+//components
+//pages
+//themes
+@import
+"layout/header";

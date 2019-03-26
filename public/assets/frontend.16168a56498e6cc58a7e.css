@@ -1,4 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);* {
+@import url(https://fonts.googleapis.com/css?family=Lato);.header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn, .header .hero-action .action-btn-2 {
+  color: #fff;
+  display: block;
+  letter-spacing: 15px; }
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -7,11 +12,6 @@ body {
   font-size: 16px;
   font-family: "Lato", sans-serif;
   line-height: 1.7; }
-
-.title, .header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn, .header .hero-action .action-btn-2 {
-  color: #fff;
-  display: block;
-  letter-spacing: 15px; }
 
 .header {
   height: 95vh;
@@ -99,7 +99,7 @@ body {
       letter-spacing: 5px;
       text-decoration: none;
       padding: 10px 15px;
-      border: 2px solid #fff;
+      border: 3px solid #fff;
       transition: all .2s ease-in-out;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
