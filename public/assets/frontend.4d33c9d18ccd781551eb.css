@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);.header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn, .header .hero-action .action-btn-2 {
+@import url(https://fonts.googleapis.com/css?family=Lato);.header .hero-title .main-title, .header .hero-title .sub-title, .header .hero-action .action-btn, .header .hero-action .action-btn-2, .about .title {
   color: #fff;
   display: block;
   letter-spacing: 15px; }
@@ -145,3 +145,41 @@ body {
           left: 0;
           z-index: -1;
           transition: all .4s; }
+
+.about {
+  background: linear-gradient(to right bottom, orange, purple);
+  padding: 150px 0;
+  height: 95vh;
+  margin-top: -120px; }
+  .about .title {
+    text-align: center;
+    background: linear-gradient(to right, limegreen, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    transition: all .3s;
+    font-size: 2em;
+    font-weight: bold; }
+    .about .title:hover {
+      -webkit-transform: skewY(2deg) skewX(15deg);
+              transform: skewY(2deg) skewX(15deg);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+  .about .images-box {
+    position: relative; }
+    .about .images-box img {
+      position: absolute;
+      transition: all .3s;
+      border-radius: 15px; }
+      .about .images-box img:hover {
+        padding: 15px;
+        z-index: 1;
+        border: 3px solid #55c57a;
+        -webkit-transform: scaleX(1.5) scaleY(1.6);
+                transform: scaleX(1.5) scaleY(1.6); }
+    .about .images-box .img-1 {
+      left: 20%; }
+    .about .images-box .img-2 {
+      left: 45%; }
+    .about .images-box .img-3 {
+      left: 30%;
+      top: 80px; }

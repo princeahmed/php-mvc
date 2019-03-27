@@ -76,7 +76,7 @@
 
 
 <!--Body Script-->
-<script src="assets/<?php echo $assets['frontend']['js'] ?>"></script>
+<script src="/assets/<?php echo $assets['frontend']['js'] ?>"></script>
 
 </body>
 </html>

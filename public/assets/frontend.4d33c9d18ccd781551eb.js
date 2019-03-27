@@ -119,6 +119,17 @@ eval("module.exports = __webpack_require__.p + \"logo.png\";\n\n//# sourceURL=we
 
 /***/ }),
 
+/***/ "./src/images/placeholder.jpg":
+/*!************************************!*\
+  !*** ./src/images/placeholder.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"placeholder.jpg\";\n\n//# sourceURL=webpack:///./src/images/placeholder.jpg?");
+
+/***/ }),
+
 /***/ "./src/js/components/form.js":
 /*!***********************************!*\
   !*** ./src/js/components/form.js ***!
@@ -139,7 +150,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction msg($msg) {\n  conso
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./src/js/components/form.js\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_logo_png__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/frontend.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form */ \"./src/js/components/form.js\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_logo_png__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _images_placeholder_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/placeholder.jpg */ \"./src/images/placeholder.jpg\");\n/* harmony import */ var _images_placeholder_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_placeholder_jpg__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack:///./src/js/frontend.js?");
 
 /***/ }),
 

@@ -1,0 +1,52 @@
+.about{
+  background: linear-gradient(to right bottom, orange, purple);
+  padding: 150px 0;
+  height: 95vh;
+  margin-top: -120px;
+  .title{
+    @extend %title;
+    text-align: center;
+    background: linear-gradient(to right, limegreen, blue);
+    background-clip: text;
+    color: transparent;
+    transition: all .3s;
+    font:{
+      size: 2em;
+      weight: bold;
+    }
+    &:hover{
+      transform: skewY(2deg) skewX(15deg);
+      text-shadow: 2px 2px 5px rgba(#000, .2);
+    }
+  }
+
+  .images-box{
+    position: relative;
+    img{
+      position: absolute;
+      transition: all .3s;
+      border-radius: 15px;
+      &:hover{
+        padding: 15px;
+        z-index: 1;
+        border: 3px solid $green;
+        transform: scaleX(1.5) scaleY(1.6);
+      }
+    }
+
+    .img-1{
+      left: 20%;
+
+    }
+
+    .img-2{
+      left: 45%;
+    }
+
+    .img-3{
+      left: 30%;
+      top: 80px;
+    }
+  }
+
+}

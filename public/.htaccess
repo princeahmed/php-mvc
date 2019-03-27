@@ -1,6 +1,10 @@
 #Remove index.php from request, But maintain the query string
 
 RewriteEngine On
+
+# Block Directory Access
+options all -indexes
+
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
